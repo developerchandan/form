@@ -1,0 +1,16 @@
+<table class="table">
+    <ul>
+      <tr>
+        <li scope="col">Email</li>
+        <li scope="col">name</li>
+        <li scope="col">salary</li>
+   
+      </tr>
+    </ul>
+      <ul *ngFor= "let s of dataFromParent">
+        <li>{{s.email}}</li>
+        <li>{{s.name}}</li>
+        <li>{{s.salary}}</li>
+      </ul>
+   
+  </table>

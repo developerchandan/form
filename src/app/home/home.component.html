@@ -1,0 +1,22 @@
+
+
+<div>
+    <label for="">Search by Name</label>
+    <input type="text" [(ngModel)]="searchTerm">
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Emp</th>
+            <th scope="col">name</th>
+            <th scope="col">salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of emp | search:searchTerm">
+            <td>{{item.emp}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.salary}}</td>
+        </tr>
+    </tbody>
+</table>

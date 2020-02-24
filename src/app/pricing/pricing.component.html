@@ -1,0 +1,22 @@
+<div>
+    <section class="from-control w-25" name="" id=""[(ngModel)]='value'>
+        <option value="eno">eno</option>
+        <option value="name">name</option>
+        <option value="salary">salary</option>
+    </section>
+</div>
+<br>
+<input type="text" placeholder="search Heare" class="from-control w-25" [(ngModel)]='searchTerm'>
+<br>
+<table class="table table-sm table bordered">
+    <td>
+        <th>emp</th>
+        <th>name</th>
+        <th>salary</th>
+    </td>
+    <tr *ngFor="let ik of emp | search:searchTerm:value">
+        <td>{{ik.eno}}</td>
+        <td>{{ik.name}}</td>
+        <td>{{ik.salary}}</td>
+    </tr>
+</table>
